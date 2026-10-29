@@ -1,0 +1,246 @@
+/* Colour Theme */
+:root {
+    --color-background: #efdcd3;
+    --color-text: #2a2220;
+    --color-card: #fcf8f5;
+    --color-accent: #c4573a;
+    --color-peach: #e8c3b5;
+}
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Page */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--color-background);
+    color: var(--color-text);
+}
+.register-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+}
+/* Registration Card */
+.register-card {
+    width: 100%;
+    max-width: 440px;
+    padding: 24px 28px;
+    background: var(--color-card);
+    border: 1px solid #c4573a;
+    border-top: 4px solid #c4573a;
+    border-radius: 16px;
+    box-shadow:
+    0 0 11px 3px rgba(196, 87, 58, 0.30) !important;
+}
+/* Header */
+.register-header {
+    text-align: center;
+    margin-bottom: 22px;
+}
+.logo {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    background: var(--color-peach);
+    color: var(--color-accent);
+    border-radius: 14px;
+    font-size: 21px;
+}
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    color: var(--color-accent);
+    margin-bottom: 8px;
+}
+.register-header h1 {
+    font-size: 26px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+.description {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #766963;
+}
+/* Form Fields */
+.form-group {
+    margin-bottom: 16px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.input-box {
+    position: relative;
+}
+/* Inputs - Match Login Page */
+.register-card .form-group input {
+    width: 100%;
+    min-height: 44px;
+    padding: 12px;
+    padding-right: 42px;
+    border: 1px solid #d8c5bb;
+    border-radius: 8px;
+    background: #ffffff;
+    color: var(--color-text);
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+}
+.register-card .form-group input::placeholder {
+    color: #91827b;
+}
+/* Focus Border */
+.register-card .form-group input:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+/* Name and Email Icons */
+.input-box > i {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8493a5;
+    font-size: 15px;
+    pointer-events: none;
+}
+/* Date of Birth */
+.register-card input[type="date"] {
+    color: var(--color-text);
+    -webkit-text-fill-color: var(--color-text);
+    color-scheme: light;
+}
+/* Password Eye Button */
+.input-box .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 4px;
+    background: transparent;
+    color: #8493a5;
+    font-size: 15px;
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 2;
+}
+.input-box .toggle-password:hover {
+    background: transparent;
+    color: var(--color-accent);
+}
+.input-box .toggle-password i {
+    position: static;
+    transform: none;
+    color: inherit;
+    font-size: inherit;
+    pointer-events: none;
+}
+/* Error Messages */
+.error-message {
+    display: block;
+    margin-top: 5px;
+    font-size: 11px;
+    color: #c0392b;
+}
+/* Autofill Background */
+.register-card input:-webkit-autofill,
+.register-card input:-webkit-autofill:hover,
+.register-card input:-webkit-autofill:focus,
+.register-card input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+    -webkit-text-fill-color: var(--color-text) !important;
+    caret-color: var(--color-text);
+    transition: background-color 5000s ease-in-out 0s;
+}
+/* Create Account Button */
+.register-card form > .submit-button {
+    width: 100%;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 5px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--color-accent);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.register-card form > .submit-button:hover {
+    background: #a8442d;
+}
+/* Login Link */
+.login-link {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #766963;
+}
+.login-link a {
+    color: var(--color-accent);
+    font-weight: 600;
+    text-decoration: none;
+}
+.login-link a:hover {
+    text-decoration: underline;
+}
+/* Bottom Note */
+.page-note {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 11px;
+    color: #766963;
+}
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .register-container {
+        padding: 16px 12px;
+    }
+    .register-card {
+        padding: 24px 20px;
+    }
+    .register-header h1 {
+        font-size: 23px;
+    }
+}
+/* Align DOB calendar icon */
+.register-card input[type="date"] {
+    padding-right: 12px;
+    min-height: 44px;
+    color: var(--color-text);
+    -webkit-text-fill-color: var(--color-text);
+}
+/* Keep other input icons aligned */
+.register-card .input-box > i {
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+}

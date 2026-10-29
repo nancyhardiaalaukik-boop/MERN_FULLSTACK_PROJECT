@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager | Login & Register</title>
+    <!-- Original page styles -->
+    <link rel="stylesheet" href="Login.css">
+    <link rel="stylesheet" href="Register.css">
+    <!-- Navigation styles -->
+    <link rel="stylesheet" href="Navigation.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <main class="container">
+        <!-- Login View -->
+        <section id="login-view" class="login-container">
+            <section class="login-card">
+                <h1>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Student Login
+                </h1>
+                <p>Login to manage your tasks and stay organised.</p>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="login-email">Email Address</label>
+                        <div class="input-box">
+                            <input
+                                type="email"
+                                id="login-email"
+                                name="email"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                                required
+                            >
+                            <i class="fa-regular fa-envelope"
+                               aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <div class="input-box">
+                            <input
+                                type="password"
+                                id="login-password"
+                                name="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                id="toggleLoginPassword"
+                                aria-label="Show password"
+                            >
+                                <i class="fa-solid fa-eye"
+                                   aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+                <p class="register-link">
+                    Don't have an account?
+                    <a href="#register" id="show-register">
+                        Register here
+                    </a>
+                </p>
+            </section>
+        </section>
+        <!-- Registration View -->
+        <section id="register-view" class="register-container" hidden>
+            <section class="register-card">
+                <header class="register-header">
+                    <div class="logo">
+                        <i class="fa-solid fa-graduation-cap"
+                           aria-hidden="true"></i>
+                    </div>
+                    <p class="eyebrow">YOUR ACADEMIC WORKSPACE</p>
+                    <h1>Create your account</h1>
+                    <p class="description">
+                        Your journey to better organisation starts here.
+                        Manage and stay on top of your academic goals.
+                    </p>
+                </header>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="register-name">Full Name</label>
+                        <div class="input-box">
+                            <input
+                                type="text"
+                                id="register-name"
+                                name="fullName"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required
+                            >
+                            <i class="fa-regular fa-user"
+                               aria-hidden="true"></i>
+                        </div>
+                        <small class="error-message"
+                               id="name-error"
+                               aria-live="polite"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email Address</label>
+                        <div class="input-box">
+                            <input
+                                type="email"
+                                id="register-email"
+                                name="email"
+                                placeholder="Enter your email address"
+                                autocomplete="email"
+                                required
+                            >
+                            <i class="fa-regular fa-envelope"
+                               aria-hidden="true"></i>
+                        </div>
+                        <small class="error-message"
+                               id="email-error"
+                               aria-live="polite"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="date-of-birth">Date of Birth</label>
+                        <input
+                            type="date"
+                            id="date-of-birth"
+                            name="dateOfBirth"
+                            autocomplete="bday"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <div class="input-box">
+                            <input
+                                type="password"
+                                id="register-password"
+                                name="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                minlength="8"
+                                required
+                            >
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                aria-label="Show password"
+                                data-password-target="register-password"
+                            >
+                                <i class="fa-solid fa-eye"
+                                   aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <small class="error-message"
+                               id="password-error"
+                               aria-live="polite"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">
+                            Confirm Password
+                        </label>
+                        <div class="input-box">
+                            <input
+                                type="password"
+                                id="confirm-password"
+                                name="confirmPassword"
+                                placeholder="Enter your password again"
+                                autocomplete="new-password"
+                                required
+                            >
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                aria-label="Show password"
+                                data-password-target="confirm-password"
+                            >
+                                <i class="fa-solid fa-eye"
+                                   aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <small class="error-message"
+                               id="confirm-password-error"
+                               aria-live="polite"></small>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        Create Account
+                        <i class="fa-solid fa-arrow-right"
+                           aria-hidden="true"></i>
+                    </button>
+                </form>
+                <p class="login-link">
+                    Already have an account?
+                    <a href="#login" id="show-login">Login here</a>
+                </p>
+            </section>
+            <p class="page-note">
+                Plan better. Stay organised. Achieve more.
+            </p>
+        </section>
+    </main>
+    <script src="Navigation.js"></script>
+</body>
+</html>
